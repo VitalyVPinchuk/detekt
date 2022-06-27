@@ -216,3 +216,7 @@ class CliArgs {
         operator fun invoke(init: CliArgs.() -> Unit): CliArgs = CliArgs().apply(init)
     }
 }
+
+class my_klass {
+    var i = 0
+}
