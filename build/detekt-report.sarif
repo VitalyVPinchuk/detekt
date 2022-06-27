@@ -3,12 +3,27 @@
   "version": "2.1.0",
   "runs": [
     {
-      "originalUriBaseIds": {
-        "%SRCROOT%": {
-          "uri": "file:///Users/vvp/IdeaProjects/detekt/./"
-        }
-      },
       "results": [
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Users/vvp/IdeaProjects/detekt/detekt-cli/src/main/kotlin/io/gitlab/arturbosch/detekt/cli/CliArgs.kt"
+                },
+                "region": {
+                  "startColumn": 7,
+                  "startLine": 219
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Class and Object names should match the pattern: [A-Z][a-zA-Z0-9]*"
+          },
+          "ruleId": "detekt.naming.ClassNaming"
+        }
       ],
       "tool": {
         "driver": {
@@ -1602,6 +1617,422 @@
               "name": "UnnecessaryBackticks",
               "shortDescription": {
                 "text": "Backticks are unnecessary."
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#chainwrapping",
+              "id": "detekt.formatting.ChainWrapping",
+              "name": "ChainWrapping",
+              "shortDescription": {
+                "text": "Checks if condition chaining is wrapped right"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#commentspacing",
+              "id": "detekt.formatting.CommentSpacing",
+              "name": "CommentSpacing",
+              "shortDescription": {
+                "text": "Checks if comments have the right spacing"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#filename",
+              "id": "detekt.formatting.Filename",
+              "name": "Filename",
+              "shortDescription": {
+                "text": "Checks if top level class matches the filename"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#finalnewline",
+              "id": "detekt.formatting.FinalNewline",
+              "name": "FinalNewline",
+              "shortDescription": {
+                "text": "Detects missing final newlines"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#importordering",
+              "id": "detekt.formatting.ImportOrdering",
+              "name": "ImportOrdering",
+              "shortDescription": {
+                "text": "Detects imports in non default order"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#indentation",
+              "id": "detekt.formatting.Indentation",
+              "name": "Indentation",
+              "shortDescription": {
+                "text": "Reports mis-indented code"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#maximumlinelength",
+              "id": "detekt.formatting.MaximumLineLength",
+              "name": "MaximumLineLength",
+              "shortDescription": {
+                "text": "Reports lines with exceeded length"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#modifierordering",
+              "id": "detekt.formatting.ModifierOrdering",
+              "name": "ModifierOrdering",
+              "shortDescription": {
+                "text": "Detects modifiers in non default order"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#noblanklinebeforerbrace",
+              "id": "detekt.formatting.NoBlankLineBeforeRbrace",
+              "name": "NoBlankLineBeforeRbrace",
+              "shortDescription": {
+                "text": "Detects blank lines before rbraces"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#noconsecutiveblanklines",
+              "id": "detekt.formatting.NoConsecutiveBlankLines",
+              "name": "NoConsecutiveBlankLines",
+              "shortDescription": {
+                "text": "Reports consecutive blank lines"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#noemptyclassbody",
+              "id": "detekt.formatting.NoEmptyClassBody",
+              "name": "NoEmptyClassBody",
+              "shortDescription": {
+                "text": "Reports empty class bodies"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#nolinebreakafterelse",
+              "id": "detekt.formatting.NoLineBreakAfterElse",
+              "name": "NoLineBreakAfterElse",
+              "shortDescription": {
+                "text": "Reports line breaks after else"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#nolinebreakbeforeassignment",
+              "id": "detekt.formatting.NoLineBreakBeforeAssignment",
+              "name": "NoLineBreakBeforeAssignment",
+              "shortDescription": {
+                "text": "Reports line breaks before assignment"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#nomultiplespaces",
+              "id": "detekt.formatting.NoMultipleSpaces",
+              "name": "NoMultipleSpaces",
+              "shortDescription": {
+                "text": "Reports multiple space usages"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#nosemicolons",
+              "id": "detekt.formatting.NoSemicolons",
+              "name": "NoSemicolons",
+              "shortDescription": {
+                "text": "Detects semicolons"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#notrailingspaces",
+              "id": "detekt.formatting.NoTrailingSpaces",
+              "name": "NoTrailingSpaces",
+              "shortDescription": {
+                "text": "Detects trailing spaces"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#nounitreturn",
+              "id": "detekt.formatting.NoUnitReturn",
+              "name": "NoUnitReturn",
+              "shortDescription": {
+                "text": "Detects optional 'Unit' return types"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#nounusedimports",
+              "id": "detekt.formatting.NoUnusedImports",
+              "name": "NoUnusedImports",
+              "shortDescription": {
+                "text": "Detects unused imports"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#nowildcardimports",
+              "id": "detekt.formatting.NoWildcardImports",
+              "name": "NoWildcardImports",
+              "shortDescription": {
+                "text": "Detects wildcast import usages"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#parameterlistwrapping",
+              "id": "detekt.formatting.ParameterListWrapping",
+              "name": "ParameterListWrapping",
+              "shortDescription": {
+                "text": "Detects mis-aligned parameter lists"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#spacingaroundcolon",
+              "id": "detekt.formatting.SpacingAroundColon",
+              "name": "SpacingAroundColon",
+              "shortDescription": {
+                "text": "Reports spaces around colons"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#spacingaroundcomma",
+              "id": "detekt.formatting.SpacingAroundComma",
+              "name": "SpacingAroundComma",
+              "shortDescription": {
+                "text": "Reports spaces around commas"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#spacingaroundcurly",
+              "id": "detekt.formatting.SpacingAroundCurly",
+              "name": "SpacingAroundCurly",
+              "shortDescription": {
+                "text": "Reports spaces around curly braces"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#spacingarounddot",
+              "id": "detekt.formatting.SpacingAroundDot",
+              "name": "SpacingAroundDot",
+              "shortDescription": {
+                "text": "Reports spaces around member invocation operator (dot)."
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#spacingaroundkeyword",
+              "id": "detekt.formatting.SpacingAroundKeyword",
+              "name": "SpacingAroundKeyword",
+              "shortDescription": {
+                "text": "Reports spaces around keywords"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#spacingaroundoperators",
+              "id": "detekt.formatting.SpacingAroundOperators",
+              "name": "SpacingAroundOperators",
+              "shortDescription": {
+                "text": "Reports spaces around operators"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#spacingaroundparens",
+              "id": "detekt.formatting.SpacingAroundParens",
+              "name": "SpacingAroundParens",
+              "shortDescription": {
+                "text": "Reports spaces around parentheses"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#spacingaroundrangeoperator",
+              "id": "detekt.formatting.SpacingAroundRangeOperator",
+              "name": "SpacingAroundRangeOperator",
+              "shortDescription": {
+                "text": "Reports spaces around range operator"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#stringtemplate",
+              "id": "detekt.formatting.StringTemplate",
+              "name": "StringTemplate",
+              "shortDescription": {
+                "text": "Detects simplifications in template strings"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#wrapping",
+              "id": "detekt.formatting.Wrapping",
+              "name": "Wrapping",
+              "shortDescription": {
+                "text": "Reports missing newlines (e.g. between parentheses of a multi-line function call"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#annotationonseparateline",
+              "id": "detekt.formatting.AnnotationOnSeparateLine",
+              "name": "AnnotationOnSeparateLine",
+              "shortDescription": {
+                "text": "Multiple annotations should be placed on separate lines. "
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#annotationspacing",
+              "id": "detekt.formatting.AnnotationSpacing",
+              "name": "AnnotationSpacing",
+              "shortDescription": {
+                "text": "There should not be empty lines between an annotation and the object that it's annotating"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#argumentlistwrapping",
+              "id": "detekt.formatting.ArgumentListWrapping",
+              "name": "ArgumentListWrapping",
+              "shortDescription": {
+                "text": "Reports incorrect argument list wrapping"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#blockcommentinitialstaralignment",
+              "id": "detekt.formatting.BlockCommentInitialStarAlignment",
+              "name": "BlockCommentInitialStarAlignment",
+              "shortDescription": {
+                "text": "Detect the alignment of the initial star in a block comment."
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#commentwrapping",
+              "id": "detekt.formatting.CommentWrapping",
+              "name": "CommentWrapping",
+              "shortDescription": {
+                "text": "Reports mis-indented code"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#discouragedcommentlocation",
+              "id": "detekt.formatting.DiscouragedCommentLocation",
+              "name": "DiscouragedCommentLocation",
+              "shortDescription": {
+                "text": "Detect discouraged comment locations."
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#enumentrynamecase",
+              "id": "detekt.formatting.EnumEntryNameCase",
+              "name": "EnumEntryNameCase",
+              "shortDescription": {
+                "text": "Reports enum entries with names that don't meet standard conventions."
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#functiontypereferencespacing",
+              "id": "detekt.formatting.FunctionTypeReferenceSpacing",
+              "name": "FunctionTypeReferenceSpacing",
+              "shortDescription": {
+                "text": "Checks the spacing before and after the angle brackets of a type argument list."
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#funkeywordspacing",
+              "id": "detekt.formatting.FunKeywordSpacing",
+              "name": "FunKeywordSpacing",
+              "shortDescription": {
+                "text": "Checks the spacing after the fun keyword."
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#kdocwrapping",
+              "id": "detekt.formatting.KdocWrapping",
+              "name": "KdocWrapping",
+              "shortDescription": {
+                "text": "Reports mis-indented code"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#modifierlistspacing",
+              "id": "detekt.formatting.ModifierListSpacing",
+              "name": "ModifierListSpacing",
+              "shortDescription": {
+                "text": "Checks the spacing between the modifiers in and after the last modifier in a modifier list."
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#multilineifelse",
+              "id": "detekt.formatting.MultiLineIfElse",
+              "name": "MultiLineIfElse",
+              "shortDescription": {
+                "text": "Detects multiline if-else statements without braces"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#noemptyfirstlineinmethodblock",
+              "id": "detekt.formatting.NoEmptyFirstLineInMethodBlock",
+              "name": "NoEmptyFirstLineInMethodBlock",
+              "shortDescription": {
+                "text": "Reports methods that have an empty first line."
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#packagename",
+              "id": "detekt.formatting.PackageName",
+              "name": "PackageName",
+              "shortDescription": {
+                "text": "Checks package name is formatted correctly"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#spacingaroundanglebrackets",
+              "id": "detekt.formatting.SpacingAroundAngleBrackets",
+              "name": "SpacingAroundAngleBrackets",
+              "shortDescription": {
+                "text": "Reports spaces around angle brackets"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#spacingarounddoublecolon",
+              "id": "detekt.formatting.SpacingAroundDoubleColon",
+              "name": "SpacingAroundDoubleColon",
+              "shortDescription": {
+                "text": "Reports spaces around double colons"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#spacingaroundunaryoperator",
+              "id": "detekt.formatting.SpacingAroundUnaryOperator",
+              "name": "SpacingAroundUnaryOperator",
+              "shortDescription": {
+                "text": "Reports spaces around unary operator"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#spacingbetweendeclarationswithannotations",
+              "id": "detekt.formatting.SpacingBetweenDeclarationsWithAnnotations",
+              "name": "SpacingBetweenDeclarationsWithAnnotations",
+              "shortDescription": {
+                "text": "Declarations and declarations with annotations should have an empty space between."
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#spacingbetweendeclarationswithcomments",
+              "id": "detekt.formatting.SpacingBetweenDeclarationsWithComments",
+              "name": "SpacingBetweenDeclarationsWithComments",
+              "shortDescription": {
+                "text": "Declarations and declarations with comments should have an empty space between."
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#trailingcomma",
+              "id": "detekt.formatting.TrailingComma",
+              "name": "TrailingComma",
+              "shortDescription": {
+                "text": "Rule to mandate/forbid trailing commas"
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#typeargumentlistspacing",
+              "id": "detekt.formatting.TypeArgumentListSpacing",
+              "name": "TypeArgumentListSpacing",
+              "shortDescription": {
+                "text": "Reports spaces in the type reference before a function."
+              }
+            },
+            {
+              "helpUri": "https://detekt.dev/formatting.html#unnecessaryparenthesesbeforetrailinglambda",
+              "id": "detekt.formatting.UnnecessaryParenthesesBeforeTrailingLambda",
+              "name": "UnnecessaryParenthesesBeforeTrailingLambda",
+              "shortDescription": {
+                "text": "Ensures there are no unnecessary parentheses before a trailing lambda"
               }
             }
           ],
