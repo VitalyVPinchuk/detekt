@@ -13,7 +13,7 @@
                   "uri": "detekt-cli/src/main/kotlin/io/gitlab/arturbosch/detekt/cli/CliArgs.kt"
                 },
                 "region": {
-                  "charLength": 8,
+                  "charLength": 7,
                   "startColumn": 7,
                   "startLine": 219
                 }
