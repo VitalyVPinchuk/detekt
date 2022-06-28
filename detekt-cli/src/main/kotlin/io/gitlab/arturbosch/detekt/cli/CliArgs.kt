@@ -79,7 +79,7 @@ class CliArgs {
         names = ["--report", "-r"],
         description = "Generates a report for given 'report-id' and stores it on given 'path'. " +
             "Entry should consist of: [report-id:path]. " +
-            "Available 'report-id' values: 'txt', 'xml', 'html', 'sarif'. " +
+            "Available 'report-id' values: 'txt', 'xml', 'html', 'md', 'sarif'. " +
             "These can also be used in combination with each other " +
             "e.g. '-r txt:reports/detekt.txt -r xml:reports/detekt.xml'"
     )
@@ -188,11 +188,10 @@ class CliArgs {
 
     @Parameter(
         names = ["--jvm-target"],
-        converter = JvmTargetConverter::class,
         description = "EXPERIMENTAL: Target version of the generated JVM bytecode that was generated during " +
-            "compilation and is now being used for type resolution"
+            "compilation and is now being used for type resolution (1.6, 1.8, 9, 10, 11, 12, 13, 14, 15, 16 or 17)"
     )
-    var jvmTarget: JvmTarget = JvmTarget.DEFAULT
+    var jvmTarget: String = JvmTarget.DEFAULT.description
 
     @Parameter(
         names = ["--version"],
