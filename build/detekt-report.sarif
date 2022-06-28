@@ -10,7 +10,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "/Users/vvp/IdeaProjects/detekt/detekt-cli/src/main/kotlin/io/gitlab/arturbosch/detekt/cli/CliArgs.kt"
+                  "uri": "detekt-cli/src/main/kotlin/io/gitlab/arturbosch/detekt/cli/CliArgs.kt"
                 },
                 "region": {
                   "charLength": 8,
