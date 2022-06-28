@@ -35,6 +35,8 @@ private fun Location.toLocation() = io.github.detekt.sarif4k.Location(
         region = Region(
             startLine = source.line.toLong(),
             startColumn = source.column.toLong(),
+            endLine = source.line.toLong() + 1,
+            endColumn = (text.end - text.start).toLong() + source.column.toLong()
         ),
         artifactLocation = if (filePath.relativePath != null) {
             ArtifactLocation(

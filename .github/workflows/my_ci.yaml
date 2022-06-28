@@ -1,4 +1,4 @@
-name: detekt with type resolution
+name: my ci
 
 on:
   push:
@@ -43,21 +43,3 @@ jobs:
         if: ${{ always() }}
         with:
           sarif_file: build/detekt-report.sarif
-
-
-  gradle:
-    runs-on: ubuntu-latest
-    if: ${{ !contains(github.event.head_commit.message, 'ci skip') }}
-    steps:
-    - name: Checkout Repo
-      uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3
-
-    - name: Setup Java
-      uses: actions/setup-java@16cca5479d7c6b6843f6a6515640ba33c6501543 # tag=v3
-      with:
-        java-version: 17
-        distribution: 'temurin'
-    - name: Run analysis
-      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1 # tag=v2
-      with:
-        arguments: detektMain detektTest
