@@ -216,6 +216,6 @@ class CliArgs {
     }
 }
 
-class myClass123<T: Any> {
+class myClass123<T : Any> {
     val i = 0
 }
