@@ -215,3 +215,7 @@ class CliArgs {
         operator fun invoke(init: CliArgs.() -> Unit): CliArgs = CliArgs().apply(init)
     }
 }
+
+class myClass123<T: Any> {
+    val i = 0
+}

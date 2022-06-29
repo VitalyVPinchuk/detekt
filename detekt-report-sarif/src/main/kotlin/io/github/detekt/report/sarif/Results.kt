@@ -41,7 +41,7 @@ private fun Location.toLocation(code: String?): io.github.detekt.sarif4k.Locatio
     if (code != null) {
         val snippet = code.take(text.end).split('\n')
         endLine = snippet.size.toLong()
-        endColumn = snippet.last().length.toLong()
+        endColumn = snippet.last().length.toLong() + 1
     }
 
     return io.github.detekt.sarif4k.Location(

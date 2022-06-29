@@ -91,7 +91,7 @@ class SarifOutputReportSpec {
 
         val boundedRegion = """
             "region": {
-              "endColumn": 15,
+              "endColumn": 16,
               "endLine": 3,
               "startColumn": 7,
               "startLine": 3
@@ -119,7 +119,7 @@ class SarifOutputReportSpec {
 
         val boundedRegion = """
             "region": {
-              "endColumn": 1,
+              "endColumn": 2,
               "endLine": 5,
               "startColumn": 7,
               "startLine": 3

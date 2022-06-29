@@ -12,6 +12,7 @@ import java.util.Locale
  */
 class XmlOutputReport : OutputReport() {
 
+    // ++
     override val ending = "xml"
 
     override val name = "Checkstyle XML report"
