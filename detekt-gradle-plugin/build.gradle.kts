@@ -63,6 +63,11 @@ dependencies {
     compileOnly(libs.kotlin.gradlePluginApi)
     implementation(libs.sarif4k)
 
+//    implementation(fileTree("../detekt-generator/build/libs/") { include("*.jar") })
+//    implementation(fileTree("../detekt-cli/build/libs/") { include("*.jar") })
+//    implementation(fileTree("../detekt-formatting/build/libs/") { include("*.jar") })
+//    implementation(libs.jcommander)
+
     // Migrate to `implementation(testFixtures(project))` in test suite configuration when this issue is fixed:
     // https://github.com/gradle/gradle/pull/19472
     functionalTestImplementation(testFixtures(project))
@@ -112,6 +117,30 @@ pluginBundle {
 }
 
 tasks {
+    val detektGenerateCustomRuleConfig by registering(JavaExec::class) {
+        description = "Generates custom rules config based on Rule annotations"
+        group = "documentation"
+
+        classpath(
+            configurations.runtimeClasspath.get(),
+            configurations.compileClasspath.get(),
+            sourceSets.main.get().output,
+        )
+        val configDir = "/Users/vvp/Downloads/"
+
+        mainClass.set("io.gitlab.arturbosch.detekt.Config")
+        args = listOf(
+            "--input",
+            """
+                ../detekt-rules-complexity/,
+                ../detekt-rules-coroutines/,
+                ../detekt-rules-documentation/,
+            """.trimIndent(),
+            "--config",
+            configDir,
+        )
+    }
+
     val writeDetektVersionProperties by registering(WriteProperties::class) {
         description = "Write the properties file with the Detekt version to be used by the plugin"
         encoding = "UTF-8"

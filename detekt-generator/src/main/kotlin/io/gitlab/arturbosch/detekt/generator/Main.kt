@@ -8,7 +8,7 @@ import kotlin.system.exitProcess
 
 @Suppress("detekt.SpreadOperator")
 fun main(args: Array<String>) {
-    val options = GeneratorArgs()
+    val options = GeneratorArgsFull()
     val parser = JCommander(options)
     parser.parse(*args)
 

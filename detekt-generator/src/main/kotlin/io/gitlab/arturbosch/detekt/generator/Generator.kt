@@ -39,4 +39,18 @@ class Generator(
 
         outPrinter.println("\nGenerated all detekt documentation in $time ms.")
     }
+
+    fun executeCustomConfig() {
+        val parser = KtCompiler()
+        val time = measureTimeMillis {
+            val ktFiles = arguments.inputPath
+                .flatMap { parseAll(parser, it) }
+
+            ktFiles.forEach(collector::visit)
+
+            printer.printCustomConfig(collector.items)
+        }
+
+        outPrinter.println("\nGenerated custom rules config in $time ms.")
+    }
 }

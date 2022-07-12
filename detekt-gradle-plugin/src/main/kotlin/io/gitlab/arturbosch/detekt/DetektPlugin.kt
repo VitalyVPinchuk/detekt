@@ -116,5 +116,13 @@ class DetektPlugin : Plugin<Project> {
     }
 }
 
+object Config {
+    @Suppress("detekt.SpreadOperator")
+    @JvmStatic
+    fun main(args: Array<String>) {
+        // io.gitlab.arturbosch.detekt.generator.CustomConfig.main(args)
+    }
+}
+
 const val CONFIGURATION_DETEKT = "detekt"
 const val CONFIGURATION_DETEKT_PLUGINS = "detektPlugins"

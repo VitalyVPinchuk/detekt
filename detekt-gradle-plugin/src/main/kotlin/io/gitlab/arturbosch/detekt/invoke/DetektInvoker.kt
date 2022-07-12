@@ -47,6 +47,8 @@ internal class DefaultCliInvoker(
         ignoreFailures: Boolean
     ) {
         try {
+            generateCustomConfig(arguments, classpath)
+
             val loader = classLoaderCache.getOrCreate(classpath)
             val clazz = loader.loadClass("io.gitlab.arturbosch.detekt.cli.Main")
             val runner = clazz.getMethod(
@@ -63,6 +65,21 @@ internal class DefaultCliInvoker(
             }
             throw GradleException(message ?: "There was a problem running detekt.", reflectionWrapper)
         }
+    }
+
+    private fun generateCustomConfig(
+        arguments: List<String>,
+        classpath: FileCollection,
+    ) {
+        val loader = classLoaderCache.getOrCreate(classpath)
+        val clazz = loader.loadClass("io.gitlab.arturbosch.detekt.generator.Main")
+        val runner = clazz.getMethod(
+            "buildRunner",
+            Array<String>::class.java,
+            PrintStream::class.java,
+            PrintStream::class.java
+        ).invoke(null, arguments.toTypedArray(), System.out, System.err)
+        runner::class.java.getMethod("execute").invoke(runner)
     }
 
     private fun isAnalysisFailure(msg: String) = "Analysis failed with" in msg && "issues" in msg
